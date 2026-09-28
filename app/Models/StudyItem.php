@@ -16,6 +16,7 @@ class StudyItem extends Model
         'Layer4：トランスポート層',
         'Layer7：アプリケーション層',
         'ネットワークの技術',
+        'その他',
     ];
 
     // 理解度（4段階）と、画面表示用のCSSクラス

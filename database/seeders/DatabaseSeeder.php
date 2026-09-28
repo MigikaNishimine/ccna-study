@@ -23,5 +23,6 @@ class DatabaseSeeder extends Seeder
     ]);
 
     $this->call(StudyItemSeeder::class);
+    $this->call(ReviewItemSeeder::class);
 }
 }
