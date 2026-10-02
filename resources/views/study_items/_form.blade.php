@@ -58,4 +58,10 @@
          value="{{ old('last_studied_at', $item->last_studied_at?->format('Y-m-d')) }}">
   @error('last_studied_at')<p class="error">{{ $message }}</p>@enderror
 </div>
+
+<div class="field">
+  <label for="memo">メモ</label>
+  <textarea id="memo" name="memo" maxlength="2000" placeholder="弱点やその日の要点などを自由に書いてください">{{ old('memo', $item->memo) }}</textarea>
+  @error('memo')<p class="error">{{ $message }}</p>@enderror
+</div>
 @endif

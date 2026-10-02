@@ -22,6 +22,7 @@ class StudyItemRequest extends FormRequest
             'understanding'   => ['required', Rule::in(array_keys(StudyItem::UNDERSTANDINGS))],
             'status'          => ['required', Rule::in(array_keys(StudyItem::STATUSES))],
             'last_studied_at' => ['nullable', 'date'],
+            'memo'            => ['nullable', 'string', 'max:2000'],
         ];
     }
 
@@ -34,6 +35,7 @@ class StudyItemRequest extends FormRequest
             'understanding'   => '理解度',
             'status'          => 'ステータス',
             'last_studied_at' => '最終学習日',
+            'memo'            => 'メモ',
         ];
     }
 
@@ -44,6 +46,7 @@ class StudyItemRequest extends FormRequest
             'max'      => ':attributeは:max文字以内で入力してください。',
             'in'       => ':attributeの選択内容が正しくありません。',
             'date'     => ':attributeは日付の形式で入力してください。',
+            'memo.max' => ':attributeは:max文字以内で入力してください。',
         ];
     }
 }

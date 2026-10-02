@@ -41,6 +41,7 @@ class StudyItem extends Model
         'understanding',
         'status',
         'last_studied_at',
+        'memo',
     ];
 
     protected $casts = [

@@ -32,6 +32,10 @@
       <dd>{{ $item->last_studied_at?->format('Y/m/d') ?? '-' }}</dd>
     </div>
   </dl>
+  <div class="detail-row">
+  <dt>メモ</dt>
+  <dd>{{ $item->memo ?: '(メモはまだありません)' }}</dd>
+  </div>
 
   <div class="detail-actions">
     <a class="btn" href="{{ route('study-items.edit', $item) }}">編集する</a>
